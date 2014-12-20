@@ -250,7 +250,7 @@
 	/**
      * Renders backend template, passing in values.
      */
-    function backendRegister($template, $values = [])
+    function renderBackend($template, $values = [])
     {
         // if template exists, render it
         if (file_exists("../templates/$template"))
