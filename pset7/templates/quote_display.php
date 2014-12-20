@@ -12,7 +12,7 @@
 		<tr>
 			<td><?= htmlspecialchars($stock["symbol"]) ?></td>
 			<td><?= htmlspecialchars($stock["name"]) ?></td>
-			<td><?= htmlspecialchars($stock["price"]) ?></td>
+			<td><?= htmlspecialchars(number_format($stock["price"],2,'.','')) ?></td>
 		</tr>
     </tbody>
 </table>
