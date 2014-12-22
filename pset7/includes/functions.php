@@ -274,4 +274,13 @@
             trigger_error("Invalid template: $template", E_USER_ERROR);
         }
     }
+    
+    /**
+     * Queries Database for users cash balance
+     */    
+    function getUserCash($id) {
+        $cash_rows = query("SELECT cash FROM users WHERE id = ?", $id);
+        $cash_row = $cash_rows[0];
+        return $cash_row["cash"];
+    }
 ?>

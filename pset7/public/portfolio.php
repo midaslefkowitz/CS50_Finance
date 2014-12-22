@@ -23,9 +23,7 @@
     }
     
     // get user cash balance
-    $cash_rows = query("SELECT cash FROM users WHERE id = ?", $id);
-    $cash_row = $cash_rows[0];
-    $cash = $cash_row["cash"];
+    $cash = getUserCash($id);
     
     //
     
