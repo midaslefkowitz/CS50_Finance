@@ -11,10 +11,7 @@
     </thead>
 
     <tbody>
-
         <?php
-            
-            
             foreach ($portfolio as $position)
             {
 
@@ -25,7 +22,7 @@
                 print("<td>"."$".(number_format($position["price"],2,'.',''))."</td>");
                 print("<td>"."$".(number_format(($position["price"] * $position["shares"]),2,'.',''))."</td>");
             }
-        ?>        
+        ?>
         <tr>
             <td colspan="4">CASH</td>
             <td>$<?= (number_format($cash,2,'.','')) ?></td>

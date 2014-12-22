@@ -13,7 +13,7 @@
         $stock = lookup($position["symbol"]);
         if ($stock !== false)
         {
-            $portfolio[]= [
+            $portfolio[] = [
                 "symbol" => $position["symbol"],
                 "name" => $stock["name"],
                 "shares" => $position["shares"],

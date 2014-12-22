@@ -9,10 +9,10 @@
     $positions = [];
     foreach ($portfolio as $position)
     {
-        $portfolio[] = [
+         $positions[] = [
             "symbol" => $position["symbol"],
-            "total_shares" => $position["shares"],
-          ]
+            "total_shares" => $position["shares"]
+          ];
     }
     
     // if form submitted
@@ -20,7 +20,7 @@
     {
         $stock = lookup($_POST["symbol"]);
  
-        $amount_to_sell = $_POST["amount"];
+        $amount_to_sell = $_POST["amount_to_sell"];
         $symbol = $_POST["symbol"];
  
         $price = $stock["price"];
@@ -29,7 +29,7 @@
 
         if ($amount_to_sell > $total_shares)
         {
-            apologize("Sorry, you can't sell ".$amount_to_sell." shares of ".$symbol." since you only own ".$total_shares." shares.";
+            apologize("Sorry, you can't sell ".$amount_to_sell." shares of ".$symbol." since you only own ".$total_shares." shares.");
         }
         
         // sell shares
@@ -52,7 +52,7 @@
     else
     {
         renderBackend("sell_form.php", [
-        "portfolio" => $portfolio,
+        "portfolio" => $positions,
         "title" => "Sell"]);
     }
 ?>
