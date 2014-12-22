@@ -24,7 +24,8 @@
             }
         ?>
         <tr>
-            <td colspan="4">CASH</td>
+            <td>CASH</td>
+            <td colspan="3"><a href="deposit.php">Deposit funds</a></td>
             <td>$<?= (number_format($cash,2,'.','')) ?></td>
         </tr>
 

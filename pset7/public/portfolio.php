@@ -25,8 +25,6 @@
     // get user cash balance
     $cash = getUserCash($id);
     
-    //
-    
     // render portfolio
     renderBackend("portfolio.php", [
         "cash" => $cash,

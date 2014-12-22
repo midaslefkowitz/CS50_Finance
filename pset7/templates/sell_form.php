@@ -82,12 +82,6 @@
             <input type="text" id="amount_to_sell" name="amount_to_sell" size="7" />
         </div>
         
-        <!-- 
-        TODO 
-        verify that have that not greater than total_shares
-        -->
-        
-        
         <div class="form-group">
             <button type="submit" class="btn btn-default">Sell</button>
         </div>
