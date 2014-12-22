@@ -33,8 +33,10 @@
 			</div>
             <div id="top">
                 <a href="/"><img alt="C$50 Finance" src="/img/logo.gif"/></a>
-            	
-            	<ul class="nav nav-pills">
+            </div>
+            
+            <div>
+                <ul class="nav nav-pills" id="navbar">
 		        	<li id="portfolio" role="presentation"><a href="portfolio.php">Portfolio</a></li>
 					<li id="quote" role="presentation"><a href="quote.php">Quote</a></li>
 					<li id="buy" role="presentation"><a href="buy.php">Buy</a></li>
@@ -43,7 +45,6 @@
 					<li role="presentation"><a href="logout.php"><strong>Log Out</strong></a></li>
 				</ul>
             </div>
-            
-            
 
             <div id="middle">
+            

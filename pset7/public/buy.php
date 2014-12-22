@@ -32,6 +32,7 @@
         }
         // update db
         query("INSERT INTO portfolio (id, symbol, shares) VALUES(?, ?, ?) ON DUPLICATE KEY UPDATE shares = shares + VALUES(shares) ", $id, $symbol, $shares);
+        query("INSERT INTO history (id, transaction, symbol, shares, price) VALUES(?, ?, ?, ?, ?)", $id, 'BUY', $symbol, $shares, $price);
         query("UPDATE users SET cash = cash - ? WHERE id = ?", $total_cost, $id);
         // redirect to portfolio
         redirect("portfolio.php");
